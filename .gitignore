@@ -1,0 +1,17 @@
+# Node modules folder ignore kare
+node_modules/
+
+# Logs ignore kare
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables ignore kare
+.env
+
+# Build output ignore kare
+dist/
+build/
+
+# Mac system files ignore kare
+.DS_Store
