@@ -1,3 +1,4 @@
+// Skills.jsx
 import { motion } from "framer-motion";
 import {
   SiHtml5,
@@ -13,9 +14,8 @@ import {
   SiGithub,
   SiCanva,
 } from "react-icons/si";
-
-import { FaMicrosoft } from "react-icons/fa"; 
-import { VscVscode } from "react-icons/vsc"; 
+import { FaMicrosoft } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
   const skillCategories = [
@@ -53,26 +53,26 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-[#0F1A2B] text-[#BDC4D4] px-6 py-20"
+      className="bg-[#0F1A2B] text-[#BDC4D4] px-4 sm:px-6 py-12 sm:py-16 md:py-20"
     >
       <div className="max-w-6xl mx-auto text-center">
-        {/* Hook line */}
+        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-extrabold text-[#FDF6E3] mb-6"
+          className="text-3xl sm:text-4xl font-extrabold text-[#FDF6E3] mb-4 sm:mb-6"
         >
           Skills That Empower
         </motion.h2>
-        <div className="w-24 h-1 mx-auto mb-6 bg-[#FDF6E3] rounded"></div>
-        <p className="text-lg text-gray-300 mb-12">
+        <div className="w-20 sm:w-24 h-1 mx-auto mb-6 sm:mb-8 bg-[#FDF6E3] rounded"></div>
+        <p className="text-base sm:text-lg text-gray-300 mb-10 sm:mb-12">
           A blend of technical expertise, tools, and creative abilities.
         </p>
 
         {/* Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -80,23 +80,23 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-[#1C2E4A]/80 border border-[#FDF6E3]/50 rounded-xl p-8 shadow-lg 
-                         hover:shadow-[0_0_25px_#FDF6E3] hover:border-[#FDF6E3] 
+              className="bg-[#1C2E4A]/80 border border-[#FDF6E3]/50 rounded-xl p-6 sm:p-8 shadow-lg 
+                         hover:shadow-[0_0_20px_#FDF6E3] hover:border-[#FDF6E3] 
                          transition transform hover:scale-105"
             >
-              <h3 className="text-2xl font-bold text-[#FDF6E3] mb-6 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#FDF6E3] mb-4 sm:mb-6 text-center">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                 {category.skills.map((skill, i) => (
                   <div
                     key={i}
-                    className="flex flex-col items-center gap-2 text-center group"
+                    className="flex flex-col items-center gap-1 sm:gap-2 text-center group"
                   >
-                    <div className="text-5xl group-hover:scale-110 transition">
+                    <div className="text-4xl sm:text-5xl group-hover:scale-110 transition">
                       {skill.icon}
                     </div>
-                    <p className="text-sm text-gray-300">{skill.label}</p>
+                    <p className="text-xs sm:text-sm text-gray-300">{skill.label}</p>
                   </div>
                 ))}
               </div>
@@ -110,14 +110,14 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 bg-[#1C2E4A]/80 border border-[#FDF6E3]/50 rounded-xl p-8 shadow-lg 
-                     hover:shadow-[0_0_25px_#FDF6E3] hover:border-[#FDF6E3] 
+          className="mt-10 sm:mt-16 bg-[#1C2E4A]/80 border border-[#FDF6E3]/50 rounded-xl p-6 sm:p-8 shadow-lg 
+                     hover:shadow-[0_0_20px_#FDF6E3] hover:border-[#FDF6E3] 
                      transition transform hover:scale-105 text-center"
         >
-          <h3 className="text-2xl font-bold text-[#FDF6E3] mb-4">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#FDF6E3] mb-3 sm:mb-4">
             Other Skills
           </h3>
-          <p className="text-gray-300">
+          <p className="text-sm sm:text-base text-gray-300">
             Social Media Management, Research & Internet Analysis
           </p>
         </motion.div>

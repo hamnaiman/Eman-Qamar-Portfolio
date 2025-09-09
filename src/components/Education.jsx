@@ -108,7 +108,7 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl p-4 shadow-md min-w-[200px] text-center"
+              className="bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl p-4 shadow-md w-64 sm:w-56 md:w-64 text-center"
             >
               <h3 className="text-base sm:text-lg font-bold text-[#FDF6E3]">
                 {cert.title}
