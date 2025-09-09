@@ -51,7 +51,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-[#0F1A2B] text-[#BDC4D4] px-6 py-20"
+      className="py-12 md:py-20 bg-[#0F1A2B] text-[#BDC4D4] px-4 sm:px-6"
     >
       {/* Section Header */}
       <motion.div
@@ -59,38 +59,39 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="max-w-4xl mx-auto text-center mb-12"
+        className="max-w-4xl mx-auto text-center mb-10 md:mb-12"
       >
-        {/* Hook line instead of "Projects" */}
-        <h2 className="text-4xl font-extrabold text-[#FDF6E3] mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FDF6E3] mb-4 md:mb-6">
           Crafted with Code
         </h2>
-        <div className="w-24 h-1 mx-auto mb-6 bg-[#FDF6E3] rounded"></div>
-        <p className="text-lg text-gray-300">
+        <div className="w-20 md:w-24 h-1 mx-auto mb-6 bg-[#FDF6E3] rounded"></div>
+        <p className="text-base sm:text-lg text-gray-300">
           A showcase of creativity, skills, and problem-solving.
         </p>
       </motion.div>
 
-      {/* Featured Project - Centered */}
+      {/* Featured Project */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="max-w-3xl mx-auto mb-16 bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl p-8 shadow-xl hover:shadow-[0_0_30px_#FDF6E3] hover:border-[#FDF6E3] transition text-center"
+        className="max-w-3xl mx-auto mb-12 md:mb-16 bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-[0_0_30px_#FDF6E3] hover:border-[#FDF6E3] transition text-center"
       >
-        <h3 className="text-3xl font-bold text-[#FDF6E3] mb-4">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FDF6E3] mb-3 md:mb-4">
           {featuredProject.title}
         </h3>
-        <div className="text-gray-300">{featuredProject.description}</div>
+        <div className="text-gray-300 text-sm sm:text-base">
+          {featuredProject.description}
+        </div>
       </motion.div>
 
-      {/* Other Projects - Horizontal Connected Boxes */}
+      {/* Other Projects */}
       <div className="relative max-w-6xl mx-auto">
-        {/* Horizontal connecting line */}
-        <div className="absolute top-1/2 left-0 right-0 h-1 bg-[#FDF6E3]/40"></div>
+        {/* Horizontal line only on medium+ screens */}
+        <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#FDF6E3]/40"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {projectsData.map((project, index) => (
             <motion.div
               key={index}
@@ -98,9 +99,9 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative w-[97%] mx-auto bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl px-6 py-5 shadow-lg hover:shadow-[0_0_20px_#FDF6E3] hover:border-[#FDF6E3] transition text-center"
+              className="relative bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl px-5 py-4 sm:px-6 sm:py-5 shadow-lg hover:shadow-[0_0_20px_#FDF6E3] hover:border-[#FDF6E3] transition text-center"
             >
-              <h3 className="text-lg font-bold text-[#FDF6E3] mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-[#FDF6E3] mb-2">
                 {project.title}
               </h3>
               <p className="text-gray-300 text-sm">{project.description}</p>

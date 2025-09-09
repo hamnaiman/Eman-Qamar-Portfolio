@@ -7,7 +7,7 @@ const Education = () => {
       title: "Bachelor of Science in Information Technology",
       institute: "University of Sargodha",
       location: "Sargodha, Pakistan",
-      year: "2020 - 2024",
+      year: "2021 - 2025",
       details: "Fresh Graduate | CGPA: 3.12 / 4.00",
     },
   ];
@@ -43,7 +43,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen bg-[#0F1A2B] text-[#BDC4D4] px-6 py-20"
+      className="py-12 md:py-20 bg-[#0F1A2B] text-[#BDC4D4] px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
@@ -52,17 +52,17 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-3 text-4xl font-extrabold text-center text-[#FDF6E3] mb-6"
+          className="flex items-center justify-center gap-3 text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-[#FDF6E3] mb-4 md:mb-6"
         >
           <FaGraduationCap className="text-[#FDF6E3]" />
           Education So Far
         </motion.h2>
-        <div className="w-24 h-1 mx-auto mb-12 bg-[#FDF6E3] rounded"></div>
+        <div className="w-20 md:w-24 h-1 mx-auto mb-8 md:mb-12 bg-[#FDF6E3] rounded"></div>
 
         {/* Education Card with Timeline */}
-        <div className="flex justify-center relative mb-20">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#FDF6E3]/40"></div>
+        <div className="flex justify-center relative mb-12 md:mb-20">
+          {/* Timeline Line only on larger screens */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#FDF6E3]/40"></div>
 
           {education.map((item, index) => (
             <motion.div
@@ -73,7 +73,7 @@ const Education = () => {
               viewport={{ once: true }}
               className="relative bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl p-6 shadow-lg w-full max-w-lg z-10"
             >
-              <h3 className="text-2xl font-bold text-[#FDF6E3]">
+              <h3 className="text-xl md:text-2xl font-bold text-[#FDF6E3]">
                 {item.title}
               </h3>
               <p className="italic text-gray-300 mt-1">{item.institute}</p>
@@ -90,16 +90,16 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-extrabold text-center text-[#FDF6E3] mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-[#FDF6E3] mb-4 md:mb-6"
         >
           Certificates
         </motion.h2>
-        <div className="w-24 h-1 mx-auto mb-12 bg-[#FDF6E3] rounded"></div>
+        <div className="w-20 md:w-24 h-1 mx-auto mb-8 md:mb-12 bg-[#FDF6E3] rounded"></div>
 
         {/* Certificates Connected Horizontally */}
         <div className="flex flex-wrap justify-center items-center gap-6 relative">
-          {/* Horizontal Line */}
-          <div className="absolute top-1/2 left-0 w-full h-1 bg-[#FDF6E3]/40 -z-10"></div>
+          {/* Horizontal Line only on larger screens */}
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-[#FDF6E3]/40 -z-10"></div>
 
           {certificates.map((cert, index) => (
             <motion.div
@@ -110,7 +110,7 @@ const Education = () => {
               viewport={{ once: true }}
               className="bg-[#1C2E4A]/80 backdrop-blur-md border border-[#FDF6E3]/60 rounded-xl p-4 shadow-md min-w-[200px] text-center"
             >
-              <h3 className="text-lg font-bold text-[#FDF6E3]">
+              <h3 className="text-base sm:text-lg font-bold text-[#FDF6E3]">
                 {cert.title}
               </h3>
               <p className="text-gray-300 text-sm">{cert.provider}</p>

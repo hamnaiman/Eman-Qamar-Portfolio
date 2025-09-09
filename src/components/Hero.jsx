@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { FiDownload } from "react-icons/fi"; 
-import dpImage from "../assets/dp.png"; // ✅ correct import
+import dpImage from "../assets/dp.jpg";
 
 const Hero = () => {
   return (
@@ -52,7 +52,7 @@ const Hero = () => {
 
           <motion.a
             whileHover={{ scale: 1.1 }}
-            href="/Eman_Qamar_Resume.pdf" // ✅ resume path fixed (must be inside public/)
+            href="/Eman-QamarResume.pdf"
             download="Eman_Qamar_Resume.pdf"
             className="flex items-center gap-2 bg-[#D1CFC9] text-[#0F1A2B] px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#BDC4D4] hover:shadow-[#1C2E4A]/50 transition backdrop-blur-sm"
           >
@@ -71,7 +71,7 @@ const Hero = () => {
       >
         <div className="relative">
           <img
-            src={dpImage} // ✅ imported image
+            src={dpImage}
             alt="Eman Qamar"
             className="w-72 h-72 object-cover rounded-full border-4 border-[#52677D] shadow-[0_0_40px_#52677D] hover:scale-105 transition"
           />
